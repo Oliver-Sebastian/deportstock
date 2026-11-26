@@ -1,0 +1,6 @@
+{
+  "name": "Préstamos Deportivos",
+  "description": "Aplicación para la gestión y préstamo de implementos deportivos",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

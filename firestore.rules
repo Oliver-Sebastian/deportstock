@@ -1,0 +1,179 @@
+rules_version = '2';
+
+// Reglas de seguridad de DEPORTSTOCK (requisito no funcional 1).
+// Publícalas en Firebase Console > Firestore Database > Reglas.
+//
+// Roles:
+//   - Toda cuenta es de estudiante: consulta catálogo, horario y únicamente sus propios préstamos.
+//   - Monitor: estudiante con un documento ACTIVO en monitores_autorizados, la lista blanca que
+//     Bienestar edita en Firebase Console (desde la app nadie la puede escribir). Administra
+//     inventario, préstamos, devoluciones y horario.
+//
+// El permiso se lee SIEMPRE de monitores_autorizados, en cada petición: si Bienestar pone
+// activo = false, el monitor pierde el acceso en ese momento. Los campos esMonitor y modoActivo
+// de usuarios son una copia para la app y no dan ningún permiso.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function autenticado() {
+      return request.auth != null;
+    }
+
+    function ruta(coleccion, id) {
+      return /databases/$(database)/documents/$(coleccion)/$(id);
+    }
+
+    function perfilPropio() {
+      return ruta('usuarios', request.auth.uid);
+    }
+
+    function correoVerificado() {
+      return autenticado() && request.auth.token.email_verified == true;
+    }
+
+    // El código estudiantil está reservado por quien hace la petición (codigosEstudiante).
+    function esCodigoPropio(codigo) {
+      return exists(ruta('codigosEstudiante', codigo))
+        && get(ruta('codigosEstudiante', codigo)).data.uid == request.auth.uid;
+    }
+
+    // monitores_autorizados/{id} existe y tiene activo == true (booleano).
+    function autorizacionActiva(id) {
+      return exists(ruta('monitores_autorizados', id))
+        && get(ruta('monitores_autorizados', id)).data.get('activo', false) == true;
+    }
+
+    // Monitor con permiso vigente: su documento en monitores_autorizados, identificado por su
+    // uid o por su código estudiantil (si ese código está reservado por él), está activo.
+    function esMonitor() {
+      return autenticado() && (
+        autorizacionActiva(request.auth.uid)
+        || (exists(perfilPropio())
+            && get(perfilPropio()).data.get('codigo', '') != ''
+            && esCodigoPropio(get(perfilPropio()).data.codigo)
+            && autorizacionActiva(get(perfilPropio()).data.codigo))
+      );
+    }
+
+    // Copia del permiso en el perfil propio: esMonitor = true y modoActivo = 'monitor' solo con
+    // permiso vigente. Volver a esMonitor = false y a modo estudiante siempre se puede.
+    function cambiosDeModoValidos() {
+      let cambios = request.resource.data.diff(resource.data).affectedKeys();
+      let nuevo = request.resource.data;
+      return (!('esMonitor' in cambios)
+              || (nuevo.esMonitor is bool && (nuevo.esMonitor == false || esMonitor())))
+        && (!('modoActivo' in cambios)
+              || nuevo.modoActivo == 'estudiante'
+              || (nuevo.modoActivo == 'monitor' && esMonitor()));
+    }
+
+    // Perfiles. El ID del documento es el uid de Firebase Authentication.
+    match /usuarios/{userId} {
+      // Cada quien lee su perfil; el monitor puede leer y listar todos (búsqueda de estudiantes).
+      allow get: if autenticado() && (request.auth.uid == userId || esMonitor());
+      allow list: if esMonitor();
+
+      // Autoregistro: siempre como estudiante (sin permiso de monitor y en modo estudiante), sin
+      // bloqueos ni préstamos y sin verificar. Nadie se crea como monitor.
+      allow create: if autenticado()
+        && request.auth.uid == userId
+        && request.resource.data.get('esMonitor', false) == false
+        && request.resource.data.get('modoActivo', 'estudiante') == 'estudiante'
+        && request.resource.data.get('rol', 'ESTUDIANTE') == 'ESTUDIANTE'
+        && request.resource.data.bloqueado == false
+        && request.resource.data.prestamoActivoId == ''
+        && request.resource.data.get('verificado', false) == false;
+
+      // - Cada quien actualiza en su perfil su nombre, programa y teléfono (Ajustes), su
+      //   verificación (solo con el correo verificado) y su modo de uso (cambiosDeModoValidos).
+      //   El código y los bloqueos no se tocan.
+      // - El monitor, en el perfil de OTRO estudiante, solo el préstamo activo y el bloqueo
+      //   (lo hacen el préstamo, la devolución y la resolución de novedades). Nadie puede dar
+      //   el permiso de monitor a otro.
+      allow update: if autenticado() && (
+        (request.auth.uid == userId
+          && request.resource.data.diff(resource.data).affectedKeys()
+               .hasOnly(['nombre', 'programa', 'telefono', 'verificado', 'esMonitor', 'modoActivo'])
+          && request.resource.data.get('telefono', '').size() <= 15
+          && (request.resource.data.get('verificado', false) == false || correoVerificado())
+          && cambiosDeModoValidos())
+        || (request.auth.uid != userId
+          && esMonitor()
+          && request.resource.data.diff(resource.data).affectedKeys()
+               .hasOnly(['prestamoActivoId', 'bloqueado', 'motivoBloqueo']))
+      );
+
+      allow delete: if false;
+    }
+
+    // Lista blanca de monitores. La crea y la edita Bienestar en Firebase Console (la consola
+    // no pasa por estas reglas). Desde la app nadie la puede escribir ni listar. El ID es el
+    // código estudiantil o el uid; cada quien puede leer solo el suyo (la app lo escucha para
+    // saber si su permiso sigue vigente).
+    match /monitores_autorizados/{id} {
+      allow get: if autenticado() && (id == request.auth.uid || esCodigoPropio(id));
+      allow list: if false;
+      allow create, update, delete: if false;
+    }
+
+    // Foto de perfil (imagen JPEG pequeña en Base64). Va aparte de `usuarios` para que la
+    // búsqueda de estudiantes del monitor no descargue todas las fotos. Cada quien gestiona
+    // la suya; el monitor puede verla para confirmar la identidad al prestar.
+    match /fotosPerfil/{userId} {
+      allow get: if autenticado() && (request.auth.uid == userId || esMonitor());
+      allow list: if false;
+      allow create, update: if autenticado()
+        && request.auth.uid == userId
+        && request.resource.data.imagen is string
+        && request.resource.data.imagen.size() < 200000;
+      allow delete: if autenticado() && request.auth.uid == userId;
+    }
+
+    // Reserva de códigos estudiantiles: un documento por código garantiza que no se repitan.
+    // Se crea en el primer ingreso con el correo verificado.
+    match /codigosEstudiante/{codigo} {
+      // Cada quien puede ver si un código está libre o es suyo; la reserva ajena no se puede leer.
+      allow get: if esMonitor()
+        || (autenticado() && (resource == null || resource.data.uid == request.auth.uid));
+      allow list: if false;
+      allow create: if correoVerificado() && request.resource.data.uid == request.auth.uid;
+      allow update: if false;
+      allow delete: if esMonitor();
+    }
+
+    // Inventario: todos lo consultan (catálogo); solo el monitor con permiso vigente lo modifica.
+    match /inventario/{itemId} {
+      allow read: if autenticado();
+      allow write: if esMonitor();
+    }
+
+    // Préstamos: el estudiante solo lee los suyos. Solo el monitor con permiso vigente registra
+    // la entrega, la devolución y la resolución de novedades, siempre de OTROS estudiantes (no
+    // las suyas). El monitor que entregó queda registrado y no se puede cambiar: así se conserva
+    // el historial de préstamos gestionados aunque después termine su monitoría.
+    match /prestamos/{prestamoId} {
+      allow read: if esMonitor()
+        || (autenticado() && resource.data.get('estudianteId', '') == request.auth.uid);
+      allow create: if esMonitor()
+        && request.resource.data.get('estudianteId', '') != request.auth.uid
+        && request.resource.data.get('monitorId', '') == request.auth.uid;
+      allow update: if esMonitor()
+        && resource.data.get('estudianteId', '') != request.auth.uid
+        && request.resource.data.get('estudianteId', '') == resource.data.get('estudianteId', '')
+        && request.resource.data.get('monitorId', '') == resource.data.get('monitorId', '');
+      allow delete: if false;
+    }
+
+    // Horario de atención de Bienestar.
+    match /horarios/{horarioId} {
+      allow read: if autenticado();
+      allow write: if esMonitor();
+    }
+
+    // Configuración general (fecha de fin de semestre).
+    match /configuracion/{documento} {
+      allow read: if autenticado();
+      allow write: if esMonitor();
+    }
+  }
+}

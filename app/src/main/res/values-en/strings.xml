@@ -1,0 +1,827 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Textos de DEPORTSTOCK en inglés. Las claves son las mismas de values/strings.xml. -->
+<resources>
+
+    <!-- Textos comunes a varias pantallas -->
+    <string name="comun_abrir">Open</string>
+    <string name="comun_aceptar">OK</string>
+    <string name="comun_agregar">Add</string>
+    <string name="comun_ajustes">Settings</string>
+    <string name="comun_articulo_no_existe">Item %1$s is no longer in the inventory.</string>
+    <string name="comun_buscar">Search</string>
+    <string name="comun_cambiar">Change</string>
+    <string name="comun_cancelar">Cancel</string>
+    <string name="comun_cargando">Loading...</string>
+    <string name="comun_categoria">Category</string>
+    <string name="comun_celular">Phone</string>
+    <string name="comun_cerrar">Close</string>
+    <string name="comun_cerrar_sesion">Sign out</string>
+    <string name="comun_codigo_articulo_de">Code: %1$s</string>
+    <string name="comun_codigo_estudiante_de">Student ID: %1$s</string>
+    <string name="comun_codigo_estudiantil">Student ID</string>
+    <string name="comun_configurar">Set up</string>
+    <string name="comun_contrasena">Password</string>
+    <string name="comun_contrasenas_no_coinciden">Passwords don\'t match</string>
+    <string name="comun_correo">Email</string>
+    <string name="comun_correo_valido">Enter a valid email address</string>
+    <string name="comun_cual_programa">Which program?</string>
+    <string name="comun_dar_de_baja">Retire</string>
+    <string name="comun_desconocido">Unknown</string>
+    <string name="comun_eliminar">Delete</string>
+    <string name="comun_en_uso">In use</string>
+    <string name="comun_entendido">OK</string>
+    <string name="comun_error_actualizar_info">Couldn\'t update your profile</string>
+    <string name="comun_error_cargar_configuracion">Couldn\'t load the configuration</string>
+    <string name="comun_error_cargar_horario">Couldn\'t load service hours</string>
+    <string name="comun_error_cargar_inventario">Couldn\'t load the inventory</string>
+    <string name="comun_error_cargar_prestamos">Couldn\'t load loans</string>
+    <string name="comun_error_desconocido">unknown error</string>
+    <string name="comun_error_detalle">Error: %1$s</string>
+    <string name="comun_escribe_nombre">Enter your full name</string>
+    <string name="comun_fecha_limite_de">Due date: %1$s</string>
+    <string name="comun_guardando">Saving...</string>
+    <string name="comun_guardar">Save</string>
+    <string name="comun_guardar_cambios">Save Changes</string>
+    <string name="comun_historial_emoji">📋 History</string>
+    <string name="comun_horario_atencion">Service Hours</string>
+    <string name="comun_horario_semestre">Hours &amp; Semester</string>
+    <string name="comun_insignia_devuelto">RETURNED</string>
+    <string name="comun_insignia_vencido">OVERDUE</string>
+    <string name="comun_limpiar_busqueda">Clear search</string>
+    <string name="comun_minimo_3_caracteres">At least 3 characters</string>
+    <plurals name="comun_n_prestamos">
+        <item quantity="one">%1$d loan</item>
+        <item quantity="other">%1$d loans</item>
+    </plurals>
+    <string name="comun_no_coinciden">Passwords don\'t match</string>
+    <string name="comun_no_se_pudo_actualizar">Couldn\'t update</string>
+    <string name="comun_no_se_pudo_guardar">Couldn\'t save</string>
+    <string name="comun_nombre_completo">Full name</string>
+    <string name="comun_novedades">Issues</string>
+    <string name="comun_ocurrio_error">Something went wrong</string>
+    <string name="comun_otro_termino">Try a different search term.</string>
+    <string name="comun_programa_academico">Program</string>
+    <string name="comun_registrar_devolucion">Record Return</string>
+    <string name="comun_registrar_prestamo">New Loan</string>
+    <string name="comun_selecciona_programa">Select your program</string>
+    <string name="comun_selecciona_programa_academico">Select your program</string>
+    <string name="comun_sin_codigo">no ID</string>
+    <string name="comun_sin_observacion">No notes</string>
+    <string name="comun_sin_observacion_minuscula">no notes</string>
+    <string name="comun_sin_prestamos">No loans recorded yet.</string>
+    <string name="comun_sin_registrar">Not set</string>
+    <string name="comun_sin_registrar_minuscula">not set</string>
+    <string name="comun_volver">Back</string>
+    <string name="comun_volver_inicio">Back to home</string>
+    <string name="comun_volver_menu">Back to main menu</string>
+
+    <!-- Inicio del monitor -->
+    <string name="inicio_bienvenida">Welcome, %1$s</string>
+    <string name="inicio_mirar_inventario">View Inventory</string>
+    <string name="inicio_monitor_en_turno">ASSISTANT ON DUTY</string>
+    <string name="inicio_nombre_por_defecto">Assistant</string>
+    <string name="inicio_reportes">Reports &amp; History</string>
+    <string name="inicio_rol">Sports department assistant</string>
+
+    <!-- Roles y modo de uso (monitor o estudiante) -->
+    <string name="rol_estudiante">Student</string>
+    <string name="rol_monitor">Assistant</string>
+    <string name="modo_error_cambiar">Couldn\'t switch mode. Please try again.</string>
+    <string name="modo_estudiante_activado">Student mode on</string>
+    <string name="modo_monitor_activado">Assistant mode on</string>
+    <string name="modo_permiso_otorgado">You\'re now an assistant. Switch to assistant mode in Settings.</string>
+    <string name="modo_permiso_terminado">Your assistant access has ended. You\'re now using the app as a student.</string>
+
+    <!-- Ajustes -->
+    <string name="ajustes_acerca_de">About the app</string>
+    <string name="ajustes_acerca_de_subtitulo">Version and purpose</string>
+    <string name="ajustes_acerca_de_titulo">About the app</string>
+    <string name="ajustes_actualizar">Edit profile</string>
+    <string name="ajustes_actualizar_subtitulo">Name, program and phone</string>
+    <string name="ajustes_apariencia">Appearance</string>
+    <string name="ajustes_cambiar_contrasena">Change password</string>
+    <string name="ajustes_cambiar_contrasena_subtitulo">Requires your current password</string>
+    <string name="ajustes_cerrar_sesion_confirmar">Yes, sign out</string>
+    <string name="ajustes_cerrar_sesion_pregunta">Sign out?</string>
+    <string name="ajustes_cerrar_sesion_subtitulo">Sign out of your account on this phone</string>
+    <string name="ajustes_cerrar_sesion_texto">This will sign out %1$s and take you back to the sign-in screen.</string>
+    <string name="ajustes_completa_tres">Fill in all three fields</string>
+    <string name="ajustes_contrasena_actual">Current password</string>
+    <string name="ajustes_contrasena_actualizada">Password updated</string>
+    <string name="ajustes_contrasena_diferente">New password must be different from the current one</string>
+    <string name="ajustes_contrasena_necesita">New password needs: %1$s</string>
+    <string name="ajustes_contrasena_nueva">New password</string>
+    <string name="ajustes_contrasena_repetir">Repeat new password</string>
+    <string name="ajustes_contrasenas_nuevas_no_coinciden">New passwords don\'t match</string>
+    <string name="ajustes_correo_y_codigo">Email: %1$s\nStudent ID: %2$s\nYour email and student ID can\'t be changed in the app.</string>
+    <string name="ajustes_dato_celular">Phone:</string>
+    <string name="ajustes_dato_correo">Email:</string>
+    <string name="ajustes_dato_id">Student ID:</string>
+    <string name="ajustes_dato_nombre">Name:</string>
+    <string name="ajustes_dato_programa">Program:</string>
+    <string name="ajustes_dato_rol">Role:</string>
+    <string name="ajustes_datos_de">%1$s details</string>
+    <string name="ajustes_datos_subtitulo">Name, email, role, ID, program and phone</string>
+    <plurals name="ajustes_disenos_disponibles">
+        <item quantity="one">%1$d theme available</item>
+        <item quantity="other">%1$d themes available</item>
+    </plurals>
+    <string name="ajustes_en_uso_tema">In use: %1$s</string>
+    <string name="ajustes_falta_telefono">Your phone number is missing</string>
+    <string name="ajustes_idioma">Language</string>
+    <string name="ajustes_idioma_subtitulo">Text across the whole app</string>
+    <string name="ajustes_informacion_actualizada">Profile updated</string>
+    <string name="ajustes_modo">Use the app as</string>
+    <string name="ajustes_modo_autorizado">Assistant authorized by Student Welfare</string>
+    <string name="ajustes_modo_autorizado_periodo">Assistant authorized by Student Welfare · term %1$s</string>
+    <string name="ajustes_modo_estudiante_detalle">Borrow equipment and see your loans</string>
+    <string name="ajustes_modo_monitor_detalle">Manage loans, returns and inventory</string>
+    <string name="ajustes_notificaciones">Loan notifications</string>
+    <string name="ajustes_notificaciones_estudiante">Alert %1$s days before the due date, and if it\'s overdue</string>
+    <string name="ajustes_notificaciones_monitor">Daily alert if any loans are overdue</string>
+    <string name="ajustes_pie">DEPORTSTOCK v1.0.0 · Universidad de Nariño, Ipiales campus</string>
+    <string name="ajustes_proposito">Digital system to manage and track the sports equipment inventory of Student Welfare, Ipiales campus.</string>
+    <string name="ajustes_regla_1">Students need an account in the app and must hand over their student ID card, which Student Welfare holds.</string>
+    <string name="ajustes_regla_2">A loan can last several days, but the due date can\'t go past the end of the semester.</string>
+    <string name="ajustes_regla_3">Borrowers agree to return the equipment in the same condition they received it.</string>
+    <string name="ajustes_regla_4">The assistant checks the equipment before returning the held ID card.</string>
+    <string name="ajustes_regla_5">Students with an overdue return or an unresolved issue (damage, missing parts or loss) can\'t borrow again.</string>
+    <string name="ajustes_reglamento">Rules &amp; policies</string>
+    <string name="ajustes_reglamento_subtitulo">Loan rules and ID card policy</string>
+    <string name="ajustes_reglamento_titulo">Loan rules</string>
+    <string name="ajustes_seccion_app">APP OPTIONS</string>
+    <string name="ajustes_seccion_modo">APP MODE</string>
+    <string name="ajustes_seccion_usuario">USER OPTIONS</string>
+    <string name="ajustes_sin_permiso_notificaciones">Without system permission, alerts only show inside the app.</string>
+    <string name="ajustes_subtitulo">Account &amp; preferences</string>
+    <string name="ajustes_ver_mas_disenos">More themes</string>
+    <string name="ajustes_version">Version 1.0.0 (Build 2026)</string>
+
+    <!-- Idiomas -->
+
+    <!-- Ver más diseños -->
+    <string name="apariencia_subtitulo">Choose how DEPORTSTOCK looks</string>
+    <string name="apariencia_titulo">Themes</string>
+    <string name="apariencia_tocar_para_usar">Tap to use</string>
+
+    <!-- Temas -->
+    <string name="tema_claro">Light</string>
+    <string name="tema_claro_descripcion">White background, high-contrast text</string>
+    <string name="tema_cyberpunk_descripcion">Neon, HUD panels and animations</string>
+    <string name="tema_oscuro">Dark</string>
+    <string name="tema_oscuro_descripcion">The original DEPORTSTOCK look</string>
+    <string name="tema_retro_descripcion">Vintage sportswear: teal, coral and mustard</string>
+    <string name="tema_solar_descripcion">High contrast for use outdoors in the sun</string>
+    <string name="tema_udenar_descripcion">Universidad de Nariño colors</string>
+    <string name="tema_varsity_descripcion">Letterman jacket: burgundy, navy and gold</string>
+
+    <!-- Inventario -->
+    <string name="inventario_baja_detalle">It will no longer appear in the inventory or catalog. Its loan history is kept.</string>
+    <string name="inventario_baja_texto">You\'re about to retire this item:</string>
+    <string name="inventario_baja_titulo">Retire this item?</string>
+    <string name="inventario_buscar_placeholder">Search by code (e.g., BA-001) or name...</string>
+    <string name="inventario_cargar_ejemplo">Load sample inventory</string>
+    <string name="inventario_categoria_de">Category: %1$s</string>
+    <string name="inventario_cd_baja">Retire item %1$s</string>
+    <string name="inventario_cd_editar">Edit item %1$s</string>
+    <string name="inventario_cd_novedad">Report issue for %1$s</string>
+    <string name="inventario_control_cantidad">Tracked by Quantity</string>
+    <string name="inventario_control_unidad">Individual Unit</string>
+    <string name="inventario_crear_n">Create %1$s Items</string>
+    <string name="inventario_disponible_prestamo">• Available to lend</string>
+    <string name="inventario_disponibles_de">• %1$s of %2$s available</string>
+    <string name="inventario_editar_titulo">Edit Item (%1$s)</string>
+    <string name="inventario_en_prestamo_a">On loan to: %1$s (%2$s)</string>
+    <string name="inventario_error_baja">Couldn\'t retire the item</string>
+    <string name="inventario_error_cargar">Couldn\'t load the inventory: %1$s</string>
+    <string name="inventario_error_ejemplo">Couldn\'t load the sample</string>
+    <string name="inventario_error_lote">Couldn\'t save the batch</string>
+    <string name="inventario_filtro_danados">Damaged</string>
+    <string name="inventario_filtro_disponibles">Available</string>
+    <string name="inventario_filtro_en_reparacion">In repair</string>
+    <string name="inventario_filtro_extraviados">Lost</string>
+    <string name="inventario_filtro_incompletos">Incomplete</string>
+    <string name="inventario_filtro_prestados">On loan</string>
+    <string name="inventario_filtro_todos_estados">All statuses</string>
+    <string name="inventario_form_auto">Auto</string>
+    <string name="inventario_form_cantidad_total">Total pieces</string>
+    <string name="inventario_form_categoria">Item category:</string>
+    <string name="inventario_form_codigo">Inventory Code (unique ID) *</string>
+    <string name="inventario_form_codigo_ejemplo">e.g., BA-001, RQ-002, PT-003</string>
+    <string name="inventario_form_codigo_fijo">The code can\'t be changed</string>
+    <string name="inventario_form_codigo_minimo">At least 2 characters (letters, numbers and hyphens)</string>
+    <string name="inventario_form_codigo_por_unidad">Each unit gets its own code</string>
+    <string name="inventario_form_codigo_sugerido">Suggested category sequence (e.g., BA-XXX)</string>
+    <string name="inventario_form_codigos">Codes to be created:</string>
+    <string name="inventario_form_error_codigo">The inventory code must be at least 2 characters.</string>
+    <string name="inventario_form_error_nombre">The item name must be at least 3 characters.</string>
+    <string name="inventario_form_estado">Item status:</string>
+    <string name="inventario_form_maximo">Max %1$s</string>
+    <string name="inventario_form_maximo_60">Max 60 characters</string>
+    <string name="inventario_form_n_codigos">(%1$s codes)</string>
+    <string name="inventario_form_nombre">Item Name *</string>
+    <string name="inventario_form_nombre_ejemplo">e.g., Golty Traditional Ball #5</string>
+    <string name="inventario_form_observaciones">Description / Notes (Optional)</string>
+    <string name="inventario_form_observaciones_ayuda">Brand, condition or details of this unit</string>
+    <string name="inventario_form_rango_a">to</string>
+    <string name="inventario_form_tipo_control">Tracking type:</string>
+    <string name="inventario_form_un_codigo">One code for all pieces</string>
+    <string name="inventario_form_unidades">Units to add</string>
+    <string name="inventario_guardar_articulo">Save Item</string>
+    <string name="inventario_no_disponible">• Not available</string>
+    <string name="inventario_nuevo">New Item</string>
+    <string name="inventario_por_cantidad">By quantity</string>
+    <string name="inventario_por_cantidad_desc">One code for several identical pieces</string>
+    <string name="inventario_por_unidad">By unit</string>
+    <string name="inventario_por_unidad_desc">Each piece has its own code</string>
+    <string name="inventario_registrar_nuevo">Add New Item</string>
+    <string name="inventario_restablecer_filtros">Reset filters</string>
+    <string name="inventario_resumen_articulos">Items</string>
+    <string name="inventario_resumen_danados">Damaged or lost</string>
+    <string name="inventario_resumen_disponibles">Available</string>
+    <string name="inventario_resumen_en_bodega">In storage</string>
+    <string name="inventario_resumen_tipos">Types</string>
+    <string name="inventario_se_presta_incompleto">• Lent incomplete</string>
+    <string name="inventario_sin_resultados">No items found</string>
+    <string name="inventario_sin_resultados_filtros">Try a different search term or filter.</string>
+    <string name="inventario_subtitulo">Equipment stock and condition</string>
+    <string name="inventario_titulo">Sports Inventory</string>
+    <string name="inventario_vacio">The inventory is empty. Use the button below to add the first item.</string>
+
+    <!-- Novedades del inventario -->
+    <string name="novedad_descontar">Write them off and remove them from the total</string>
+    <string name="novedad_ejemplo_danado">e.g., Torn seam, won\'t hold air</string>
+    <string name="novedad_ejemplo_extraviado">e.g., Not found in Friday\'s inventory check</string>
+    <string name="novedad_ejemplo_incompleto">e.g., Two pawns and a bishop missing</string>
+    <plurals name="novedad_encontradas">
+        <item quantity="one">%1$d lost piece found</item>
+        <item quantity="other">%1$d lost pieces found</item>
+    </plurals>
+    <string name="novedad_error_registrar">Couldn\'t report the issue</string>
+    <string name="novedad_marcar">Mark as %1$s</string>
+    <plurals name="novedad_n_danadas">
+        <item quantity="one">%1$d damaged</item>
+        <item quantity="other">%1$d damaged</item>
+    </plurals>
+    <plurals name="novedad_n_extraviadas">
+        <item quantity="one">%1$d lost</item>
+        <item quantity="other">%1$d lost</item>
+    </plurals>
+    <string name="novedad_observacion">Notes *</string>
+    <string name="novedad_piezas_danadas">Damaged</string>
+    <plurals name="novedad_piezas_de">
+        <item quantity="one">Pieces (of %1$d available):</item>
+        <item quantity="other">Pieces (of %1$d available):</item>
+    </plurals>
+    <string name="novedad_piezas_extraviadas">Lost</string>
+    <string name="novedad_registrado">Logged: %1$s. %2$s</string>
+    <string name="novedad_registrar">Report an issue:</string>
+    <plurals name="novedad_reparadas">
+        <item quantity="one">%1$d damaged piece repaired</item>
+        <item quantity="other">%1$d damaged pieces repaired</item>
+    </plurals>
+    <string name="novedad_resuelta_completo">Completed: mark available</string>
+    <string name="novedad_resuelta_encontrado">Found: mark available</string>
+    <string name="novedad_resuelta_reparado">Repaired: mark available</string>
+    <string name="novedad_si_no_aparece">If it doesn\'t turn up, retire it with the trash button.</string>
+    <string name="novedad_titulo">Issues for %1$s</string>
+    <string name="novedad_unidad_prestada">This unit is on loan. If it comes back with issues, report them when you record the return.</string>
+
+    <!-- Registrar préstamo -->
+    <string name="prestamo_acepto">I agree to return the sports equipment on time and in good condition.</string>
+    <plurals name="prestamo_agregar_articulo">
+        <item quantity="one">Add item (%1$d available)</item>
+        <item quantity="other">Add item (%1$d available)</item>
+    </plurals>
+    <string name="prestamo_articulos_ayuda">A student can borrow one or more items</string>
+    <plurals name="prestamo_articulos_titulo">
+        <item quantity="one">Items to Lend (%1$d selected)</item>
+        <item quantity="other">Items to Lend (%1$d selected)</item>
+    </plurals>
+    <string name="prestamo_asignados">Items in this loan:</string>
+    <string name="prestamo_bloqueado_detalle">They can\'t borrow until this is resolved in \"Record Return\".</string>
+    <string name="prestamo_boton_acepta">Accept the borrower agreement</string>
+    <string name="prestamo_boton_bloqueado">Blocked: can\'t borrow</string>
+    <string name="prestamo_boton_configura_semestre">Set the end of semester</string>
+    <string name="prestamo_boton_confirma_carnet">Confirm the ID card hold</string>
+    <plurals name="prestamo_boton_registrar">
+        <item quantity="one">Record Loan (%1$d item)</item>
+        <item quantity="other">Record Loan (%1$d items)</item>
+    </plurals>
+    <string name="prestamo_boton_selecciona_articulo">Select at least 1 item</string>
+    <string name="prestamo_boton_selecciona_estudiante">Select a student</string>
+    <string name="prestamo_buscar_estudiante">Student ID or name *</string>
+    <string name="prestamo_buscar_estudiante_ejemplo">e.g., 221015042 or Juan Pérez</string>
+    <string name="prestamo_buscar_placeholder">Search by code (e.g., BA-001) or name...</string>
+    <string name="prestamo_carnet_debes_retener">You must hold the ID card to record the loan</string>
+    <string name="prestamo_carnet_retenido_si">ID card held during the loan (Yes)</string>
+    <string name="prestamo_codigo_programa">Student ID: %1$s • %2$s</string>
+    <string name="prestamo_compromiso_subtitulo">Borrower agreement and signature</string>
+    <string name="prestamo_confirmar_guardar">Confirm &amp; Save</string>
+    <string name="prestamo_confirmar_titulo">Confirm Loan</string>
+    <string name="prestamo_denegado_carnet">LOAN DENIED: ID CARD HELD</string>
+    <string name="prestamo_denegado_carnet_detalle">Has an unreturned loan: %1$s</string>
+    <string name="prestamo_denegado_carnet_simple">Has an unreturned loan.</string>
+    <string name="prestamo_denegado_novedad">LOAN DENIED: UNRESOLVED ISSUE</string>
+    <string name="prestamo_denegado_novedad_detalle">Has a return with issues (damage, missing parts or loss) waiting to be resolved.</string>
+    <string name="prestamo_denegado_vencida">LOAN DENIED: OVERDUE RETURN</string>
+    <string name="prestamo_denegado_vencida_detalle">Was due back on %1$s: %2$s</string>
+    <string name="prestamo_detalles">Loan Details</string>
+    <string name="prestamo_detalles_subtitulo">Due date and ID card</string>
+    <string name="prestamo_elige_articulo">Choose an item to add</string>
+    <string name="prestamo_error_estudiantes">Couldn\'t load students</string>
+    <string name="prestamo_error_registrar">Couldn\'t record the loan</string>
+    <string name="prestamo_estudiante_ayuda">Search by student ID or name</string>
+    <string name="prestamo_estudiante_bloqueado">Blocked</string>
+    <string name="prestamo_estudiante_requiere_cuenta">The student must have an account in the app</string>
+    <string name="prestamo_estudiante_titulo">Borrower</string>
+    <string name="prestamo_fecha_limite">Return due date</string>
+    <string name="prestamo_fin_semestre">End of semester: %1$s</string>
+    <string name="prestamo_firma">Signature (draw with your finger):</string>
+    <string name="prestamo_firma_aqui">✍️ Have the student sign here</string>
+    <string name="prestamo_limpiar_firma">Clear signature</string>
+    <plurals name="prestamo_opcion_disponibles">
+        <item quantity="one">\u0020(%1$d available)</item>
+        <item quantity="other">\u0020(%1$d available)</item>
+    </plurals>
+    <string name="prestamo_opcion_incompleto">\u0020(incomplete)</string>
+    <string name="prestamo_programa_sin_registrar">Program not set</string>
+    <string name="prestamo_quitar">Remove item</string>
+    <string name="prestamo_resumen">Summary:</string>
+    <string name="prestamo_resumen_articulos">• Items to hand over (%1$s):</string>
+    <string name="prestamo_resumen_carnet">• ID card held: Yes (kept at Student Welfare)</string>
+    <string name="prestamo_resumen_estudiante">• Student: %1$s (%2$s)</string>
+    <string name="prestamo_resumen_fecha">• Return due date: %1$s</string>
+    <string name="prestamo_resumen_incompleto">\u0020(incomplete: %1$s)</string>
+    <string name="prestamo_resumen_nota">Each item\'s availability will be updated and the ID card hold will be recorded.</string>
+    <string name="prestamo_retencion">Physical ID Card Hold</string>
+    <string name="prestamo_se_entrega_incompleto">Handed over incomplete: %1$s</string>
+    <string name="prestamo_seleccionar">Select available items from the inventory:</string>
+    <string name="prestamo_semestre_sin_configurar">End of semester not set</string>
+    <string name="prestamo_sin_articulos">No items added yet. Pick them from the \"Add item\" list below.</string>
+    <string name="prestamo_sin_estudiantes">No registered students match. Ask them to create an account in the app and verify their email.</string>
+    <string name="prestamo_sin_mas">No more available items in this filter.</string>
+    <string name="prestamo_subtitulo">Loans with student ID card held</string>
+    <string name="prestamo_validacion">Review &amp; Signature</string>
+    <string name="prestamo_verifica_carnet">🪪 Check that the physical ID card belongs to this student.</string>
+
+    <!-- Registrar devolución -->
+    <string name="devolucion_aviso_entrega">🪪 Once confirmed, hand the physical ID card back to the student.</string>
+    <string name="devolucion_aviso_novedades">⚠️ With issues, the ID card stays held and the student is blocked until it\'s resolved.</string>
+    <string name="devolucion_buscar">Search by student, ID or item...</string>
+    <string name="devolucion_buscar_ejemplo">e.g., 221015042, Juan Pérez, BA-001</string>
+    <string name="devolucion_carnet_retenido">ID Card Held</string>
+    <string name="devolucion_como_se_presto">Same as lent</string>
+    <string name="devolucion_como_se_resolvio">How was it resolved? (optional)</string>
+    <string name="devolucion_describe">Describe the issue</string>
+    <string name="devolucion_devolver_liberar">Return &amp; Release ID Card</string>
+    <string name="devolucion_ejemplo_cantidad">e.g., 2 cones broken, 1 not returned</string>
+    <string name="devolucion_ejemplo_danado">e.g., Broken valve, won\'t hold air</string>
+    <string name="devolucion_ejemplo_extraviado">e.g., Says it was lost on the field</string>
+    <string name="devolucion_ejemplo_incompleto">e.g., Two pawns missing</string>
+    <string name="devolucion_error_cargar">Couldn\'t load loans: %1$s</string>
+    <string name="devolucion_faltan_mas">More pieces missing</string>
+    <string name="devolucion_fecha_devolucion">Returned: %1$s</string>
+    <string name="devolucion_implementos_prestados">Items on loan (%1$s):</string>
+    <string name="devolucion_insignia_novedad">UNRESOLVED ISSUE</string>
+    <string name="devolucion_insignia_pendiente">ACTIVE</string>
+    <string name="devolucion_observacion">Issue notes *</string>
+    <string name="devolucion_observaciones">General notes (optional)</string>
+    <string name="devolucion_pestana_activos">🪪 Active (%1$s)</string>
+    <string name="devolucion_pestana_novedades">⚠️ Issues (%1$s)</string>
+    <string name="devolucion_pestana_vencidos">⏰ Overdue (%1$s)</string>
+    <string name="devolucion_piezas_danadas">Damaged pieces:</string>
+    <string name="devolucion_piezas_no_regresaron">Pieces not returned:</string>
+    <string name="devolucion_reciente">recently</string>
+    <string name="devolucion_registrar_novedades">Record with Issues</string>
+    <string name="devolucion_resolucion_ejemplo">e.g., Replaced the ball / Returned the pieces</string>
+    <string name="devolucion_resolver_liberar">Resolve &amp; Release ID Card</string>
+    <string name="devolucion_resolver_liberar_largo">Resolve Issue &amp; Release ID Card</string>
+    <string name="devolucion_resolver_texto">The ID card will be released and the student can borrow again. The item keeps its issue in the inventory until you mark it available or retire it.</string>
+    <string name="devolucion_resolver_titulo">Resolve Issue</string>
+    <string name="devolucion_retiro">Borrowed: %1$s</string>
+    <string name="devolucion_revisa">Check each item and select its condition:</string>
+    <string name="devolucion_se_presto_incompleto">Lent incomplete: %1$s</string>
+    <string name="devolucion_sin_registros_filtro">Nothing in this filter.</string>
+    <plurals name="devolucion_subtitulo">
+        <item quantity="one">%1$d active loan with ID card held</item>
+        <item quantity="other">%1$d active loans with ID card held</item>
+    </plurals>
+    <string name="devolucion_todo_devuelto">All equipment is back and no ID cards are held.</string>
+    <string name="devolucion_vacio_activos">No active loans</string>
+    <string name="devolucion_vacio_busqueda">No loans found</string>
+    <string name="devolucion_vacio_historial">No loans recorded yet</string>
+    <string name="devolucion_vacio_novedades">No unresolved issues</string>
+    <string name="devolucion_vacio_vencidos">No overdue loans</string>
+
+    <!-- Inicio del estudiante -->
+    <string name="estudiante_activos">Active loans (%1$s)</string>
+    <string name="estudiante_agotado">out of stock</string>
+    <string name="estudiante_agrega_telefono">📱 Add your phone so Student Welfare can contact you.</string>
+    <string name="estudiante_bloqueado_accion">Visit the Student Welfare Sports Office to resolve it.</string>
+    <string name="estudiante_bloqueado_detalle">You have a return with issues (damage, missing parts or loss) waiting to be resolved.</string>
+    <string name="estudiante_bloqueado_titulo">YOU CAN\'T BORROW RIGHT NOW</string>
+    <string name="estudiante_buen_estado">\u0020— good condition</string>
+    <string name="estudiante_buscar">Search equipment...</string>
+    <string name="estudiante_carnet_retenido">🪪 Your ID card is held at Student Welfare.</string>
+    <string name="estudiante_catalogo">Catalog</string>
+    <string name="estudiante_catalogo_sin_resultados">No items match the filter</string>
+    <string name="estudiante_catalogo_vacio">No equipment added yet</string>
+    <string name="estudiante_devuelto_el">Returned on %1$s</string>
+    <string name="estudiante_disponibles">available</string>
+    <string name="estudiante_disponibles_de">%1$s of %2$s</string>
+    <string name="estudiante_error_catalogo">Couldn\'t load the catalog</string>
+    <string name="estudiante_error_historial">Couldn\'t load your history</string>
+    <string name="estudiante_error_perfil">Couldn\'t load your profile</string>
+    <string name="estudiante_finalizados">Past loans (%1$s)</string>
+    <string name="estudiante_horario">Hours</string>
+    <string name="estudiante_horario_info">Sports Office · Student Welfare, Ipiales campus. Show your student ID card to borrow equipment.</string>
+    <string name="estudiante_insignia_con_novedades">RETURNED WITH ISSUES</string>
+    <string name="estudiante_insignia_por_devolver">TO RETURN</string>
+    <string name="estudiante_mis_prestamos">My loans</string>
+    <string name="estudiante_mostrar">Show</string>
+    <string name="estudiante_mostrar_disponibles">Available only</string>
+    <string name="estudiante_mostrar_todos">All</string>
+    <string name="estudiante_prestamo_del">Loan on %1$s</string>
+    <string name="estudiante_sin_activos">You have no equipment to return.</string>
+    <string name="estudiante_sin_finalizados">Loans you\'ve returned will appear here.</string>
+    <plurals name="estudiante_unidades_incompletas">
+        <item quantity="one">%1$d incomplete unit</item>
+        <item quantity="other">%1$d incomplete units</item>
+    </plurals>
+
+    <!-- Horario y semestre -->
+    <string name="horario_agregar_franja">Add time slot</string>
+    <string name="horario_apertura">Opening time:</string>
+    <string name="horario_cierre">Closing time:</string>
+    <string name="horario_definir">Set</string>
+    <string name="horario_dia">Day of the week:</string>
+    <string name="horario_eliminar_franja">Delete time slot</string>
+    <string name="horario_eliminar_franja_pregunta">Delete time slot?</string>
+    <string name="horario_error_cargar">Couldn\'t load service hours: %1$s</string>
+    <string name="horario_error_configuracion">Couldn\'t load the configuration: %1$s</string>
+    <string name="horario_error_dia">Pick a day from Monday to Saturday</string>
+    <string name="horario_error_horas">Closing time must be after opening time</string>
+    <string name="horario_fecha_defecto">Default due date for new loans.</string>
+    <string name="horario_fecha_pasada">This date has passed: update it to record loans.</string>
+    <string name="horario_fin_semestre">End of semester</string>
+    <string name="horario_fin_semestre_ayuda">No loan can be due after this date</string>
+    <string name="horario_franja_detalle">%1$s, %2$s to %3$s</string>
+    <string name="horario_nueva_franja">New time slot</string>
+    <string name="horario_sin_configurar">Not set</string>
+    <string name="horario_sin_fecha">Loans can\'t be recorded without this date.</string>
+    <string name="horario_sin_publicar">Service hours haven\'t been posted yet.</string>
+    <string name="horario_subtitulo">Student Welfare hours and loan due date</string>
+    <string name="horario_visible_todos">Visible to all app users</string>
+
+    <!-- Ingreso -->
+    <string name="ingreso_bienvenido">Welcome back</string>
+    <string name="ingreso_completa">Enter your email and password</string>
+    <string name="ingreso_correo_sin_verificar">Your email %1$s isn\'t verified yet. Open the link we sent you (check your spam folder too) and sign in again.</string>
+    <string name="ingreso_escribe_correo_recuperacion">Enter your email above and we\'ll send you a reset link</string>
+    <string name="ingreso_ingresar">Sign in</string>
+    <string name="ingreso_olvidaste">Forgot your password?</string>
+    <string name="ingreso_para_reenviar">Enter your email and password to resend the link</string>
+    <string name="ingreso_recuperacion">We sent a link to %1$s to reset your password.</string>
+    <string name="ingreso_reenviado">We sent the verification link again to %1$s. Open it, then sign in again.</string>
+    <string name="ingreso_reenviar">Resend verification email</string>
+    <string name="ingreso_registrate">Student without an account? Sign up</string>
+
+    <!-- Registro -->
+    <string name="registro_codigo_invalido">Student ID must be 4 to 15 letters or numbers</string>
+    <string name="registro_completa">Fill in all required fields</string>
+    <string name="registro_confirmar_correo">Confirm email</string>
+    <string name="registro_correo">Personal email</string>
+    <string name="registro_correo_ayuda">We\'ll send the activation link there</string>
+    <string name="registro_correo_no_coincide">Doesn\'t match the email above</string>
+    <string name="registro_correos_no_coinciden">Emails don\'t match</string>
+    <string name="registro_crear_cuenta">Create account</string>
+    <string name="registro_enlace_enviado">We sent a confirmation link to %1$s. Open it to verify your account, then sign in.</string>
+    <string name="registro_ir_ingreso">Go to sign in</string>
+    <string name="registro_no_llega">Didn\'t get it? Check your spam folder. You can also ask us to resend it from the sign-in screen.</string>
+    <string name="registro_registrarme">Sign up</string>
+    <string name="registro_repetir_contrasena">Repeat password</string>
+    <string name="registro_revisa_correo">Check your email</string>
+    <string name="registro_subtitulo">Sign up as a student</string>
+    <string name="registro_ya_tengo_cuenta">I have an account — sign in</string>
+
+    <!-- Reportes (pantalla) -->
+    <string name="reportes_activos">Active</string>
+    <string name="reportes_activos_sub">Not returned</string>
+    <string name="reportes_ayuda_formato">After choosing a format, you can pick where to save the file (e.g., Downloads or Drive).</string>
+    <string name="reportes_buscar_articulo">Item code or name</string>
+    <string name="reportes_buscar_estudiante">Student ID or name</string>
+    <string name="reportes_con_novedad">Items with issues</string>
+    <string name="reportes_con_novedad_sub">Damaged, incomplete or lost, with notes</string>
+    <string name="reportes_desde">From: %1$s</string>
+    <string name="reportes_desde_inicio">start</string>
+    <string name="reportes_error_destino">Couldn\'t open the destination file</string>
+    <string name="reportes_error_exportar">Couldn\'t export: %1$s</string>
+    <string name="reportes_generando">Generating report...</string>
+    <plurals name="reportes_guardado_inventario">
+        <item quantity="one">Inventory report saved as %1$s (%2$d row)</item>
+        <item quantity="other">Inventory report saved as %1$s (%2$d rows)</item>
+    </plurals>
+    <plurals name="reportes_guardado_prestamos">
+        <item quantity="one">Loans report saved as %1$s (%2$d row)</item>
+        <item quantity="other">Loans report saved as %1$s (%2$d rows)</item>
+    </plurals>
+    <string name="reportes_hasta">To: %1$s</string>
+    <string name="reportes_hasta_hoy">today</string>
+    <string name="reportes_hoy">Today</string>
+    <string name="reportes_hoy_sub">Today\'s loans</string>
+    <string name="reportes_mas_prestados">Most borrowed items</string>
+    <string name="reportes_mas_prestados_sub">By number of loans recorded</string>
+    <string name="reportes_n_con_novedades">%1$d with issues</string>
+    <string name="reportes_n_sin_devolver">%1$d not returned</string>
+    <string name="reportes_novedades_sub">Damaged, incomplete or lost</string>
+    <string name="reportes_periodo">Report period</string>
+    <string name="reportes_periodo_sub">Filter loans by loan date</string>
+    <string name="reportes_pestana_exportar">📤 Export</string>
+    <string name="reportes_pestana_indicadores">📊 Stats</string>
+    <string name="reportes_por_articulo">By item</string>
+    <string name="reportes_por_estudiante">By student</string>
+    <plurals name="reportes_prestamos_periodo">
+        <item quantity="one">%1$d loan in this period</item>
+        <item quantity="other">%1$d loans in this period</item>
+    </plurals>
+    <string name="reportes_quitar_filtro">Clear filter</string>
+    <string name="reportes_sin_app_abrir">No installed app can open this type of file.</string>
+    <string name="reportes_sin_app_guardar">This device has no app to choose where to save files.</string>
+    <string name="reportes_sin_novedades">No items with issues in the inventory.</string>
+    <string name="reportes_sin_resultados">No results match your search.</string>
+    <string name="reportes_subtitulo">Stats, export and history</string>
+    <string name="reportes_tipo_inventario">Inventory report</string>
+    <string name="reportes_tipo_inventario_sub">Stock, status and times borrowed in the period</string>
+    <string name="reportes_tipo_prestamos">Loans report</string>
+    <string name="reportes_tipo_prestamos_sub">One row per loan, with its return status</string>
+    <string name="reportes_titulo">Reports</string>
+    <plurals name="reportes_veces">
+        <item quantity="one">%1$d time</item>
+        <item quantity="other">%1$d times</item>
+    </plurals>
+    <string name="reportes_vencidos">Overdue</string>
+    <string name="reportes_vencidos_sub">Past due date</string>
+
+    <!-- Reportes (archivos CSV, Excel y PDF) -->
+    <string name="reporte_archivo_inventario">inventory</string>
+    <string name="reporte_archivo_prestamos">loans</string>
+    <string name="reporte_carnet_devuelto">Returned</string>
+    <string name="reporte_carnet_retenido">Held</string>
+    <string name="reporte_col_articulos">Items</string>
+    <string name="reporte_col_carnet">ID card</string>
+    <string name="reporte_col_categoria">Category</string>
+    <string name="reporte_col_celular">Phone</string>
+    <string name="reporte_col_codigo">Code</string>
+    <string name="reporte_col_codigo_estudiante">ID</string>
+    <string name="reporte_col_control">Tracking</string>
+    <string name="reporte_col_danadas">Damaged</string>
+    <string name="reporte_col_disponibles">Available</string>
+    <string name="reporte_col_estado">Status</string>
+    <string name="reporte_col_estudiante">Student</string>
+    <string name="reporte_col_extraviadas">Lost</string>
+    <string name="reporte_col_fecha_devolucion">Return date</string>
+    <string name="reporte_col_fecha_limite">Due date</string>
+    <string name="reporte_col_fecha_prestamo">Loan date</string>
+    <string name="reporte_col_monitor">Assistant</string>
+    <string name="reporte_col_nombre">Name</string>
+    <string name="reporte_col_novedades">Issues and notes</string>
+    <string name="reporte_col_observaciones">Notes</string>
+    <string name="reporte_col_piezas">Pieces</string>
+    <string name="reporte_col_prestadas">On loan</string>
+    <string name="reporte_col_prestamos_periodo">Loans in period</string>
+    <string name="reporte_col_programa">Program</string>
+    <string name="reporte_col_total">Total</string>
+    <string name="reporte_dado_de_baja">RETIRED</string>
+    <string name="reporte_desde">From %1$s</string>
+    <string name="reporte_estado_devuelto">Returned</string>
+    <string name="reporte_estado_pendiente">Active</string>
+    <string name="reporte_estado_resuelto">Returned with issues (resolved)</string>
+    <string name="reporte_estado_sin_resolver">Returned with issues (unresolved)</string>
+    <string name="reporte_estado_vencido">Overdue</string>
+    <string name="reporte_estudiante_sin_nombre">Unnamed student</string>
+    <string name="reporte_hasta">Until %1$s</string>
+    <string name="reporte_hoja_defecto">Report</string>
+    <string name="reporte_hoja_inventario">Inventory</string>
+    <string name="reporte_hoja_prestamos">Loans</string>
+    <plurals name="reporte_n_articulos">
+        <item quantity="one">%1$d item</item>
+        <item quantity="other">%1$d items</item>
+    </plurals>
+    <string name="reporte_pagina">Page %1$s</string>
+    <string name="reporte_rango">From %1$s to %2$s</string>
+    <string name="reporte_resumen_inventario">%1$s · Loans counted: %2$s · Generated on %3$s</string>
+    <string name="reporte_resumen_prestamos">%1$s · %2$s · Generated on %3$s</string>
+    <string name="reporte_sin_registros">No records for this report.</string>
+    <string name="reporte_titulo_inventario">DEPORTSTOCK - Inventory report</string>
+    <string name="reporte_titulo_prestamos">DEPORTSTOCK - Loans report</string>
+    <string name="reporte_todos">All records</string>
+
+    <!-- Recordatorios -->
+    <string name="recordatorio_en_dias">Your loan is due in %1$s days (%2$s). Remember to return the equipment.</string>
+    <string name="recordatorio_hoy">Your loan is due today (%1$s). Return the equipment to Student Welfare.</string>
+    <string name="recordatorio_manana">Your loan is due tomorrow (%1$s). Remember to return the equipment.</string>
+    <string name="recordatorio_monitor_uno">There\'s 1 overdue loan. Check it in Record Return.</string>
+    <string name="recordatorio_monitor_varios">There are %1$s overdue loans. Check them in Record Return.</string>
+    <string name="recordatorio_vencido">Your loan was due on %1$s. Return the equipment to Student Welfare to get your ID card back.</string>
+
+    <!-- Notificaciones -->
+    <string name="notificacion_canal">Loans &amp; due dates</string>
+    <string name="notificacion_canal_descripcion">Due date and overdue loan alerts</string>
+    <string name="notificacion_titulo">Equipment return</string>
+    <string name="notificacion_titulo_vencidos">Overdue loans</string>
+
+    <!-- Contraseña -->
+    <string name="contrasena_mostrar">Show password</string>
+    <string name="contrasena_necesita">Password needs: %1$s</string>
+    <string name="contrasena_ocultar">Hide password</string>
+    <string name="contrasena_req_especial" formatted="false">One special character (e.g., ! @ # $ %% * . -)</string>
+    <string name="contrasena_req_longitud">At least %1$d characters</string>
+    <string name="contrasena_req_mayuscula">One uppercase letter</string>
+    <string name="contrasena_req_minuscula">One lowercase letter</string>
+    <string name="contrasena_req_numero">One number</string>
+    <string name="contrasena_req_sin_espacios">No spaces</string>
+
+    <!-- Celular -->
+    <string name="telefono_ayuda">Student Welfare uses it to contact you about your loans</string>
+    <string name="telefono_digitos">The number must have %1$s digits</string>
+    <string name="telefono_escribe">Enter your phone number</string>
+    <string name="telefono_prefijo">Must start with 3 (mobile) or 60 (landline)</string>
+
+    <!-- Contactar al estudiante -->
+    <string name="contacto_error_whatsapp">Couldn\'t open WhatsApp.</string>
+    <string name="contacto_llamar">Call</string>
+    <string name="contacto_sin_app_llamar">No app available to make calls.</string>
+    <string name="contacto_sin_telefono">📵 No phone on file: ask them to add it in Settings &gt; Edit profile.</string>
+
+    <!-- Contador de cantidad -->
+    <string name="contador_agregar">Add one</string>
+    <string name="contador_quitar">Remove one</string>
+
+    <!-- Encabezado institucional -->
+    <string name="encabezado_fundada">FOUNDED IN 1904 · IPIALES CAMPUS</string>
+    <string name="encabezado_logo">Universidad de Nariño logo</string>
+    <string name="encabezado_logo_completo">Universidad de Nariño, founded in 1904</string>
+
+    <!-- Foto de perfil -->
+    <string name="foto_error_guardar">Couldn\'t save the photo</string>
+    <string name="foto_error_leer">Couldn\'t read the image</string>
+    <string name="foto_error_leer_otra">Couldn\'t read the image. Try another one.</string>
+    <string name="foto_error_quitar">Couldn\'t remove the photo</string>
+    <string name="foto_galeria">Choose from gallery</string>
+    <string name="foto_perfil">Profile photo</string>
+    <string name="foto_quitar">Remove photo</string>
+    <string name="foto_sin_camara">This phone has no camera app available.</string>
+    <string name="foto_sin_foto">No profile photo</string>
+    <string name="foto_tomar">Take a photo</string>
+
+    <!-- Fechas -->
+    <string name="fecha_sin_fecha">No date</string>
+
+    <!-- Errores de conexión y de Firebase -->
+    <string name="error_contrasena_debil">The password is too weak. Check the requirements.</string>
+    <string name="error_correo_formato">The email address isn\'t valid.</string>
+    <string name="error_credenciales">Wrong email or password. Check your credentials.</string>
+    <string name="error_cuenta_existe">An account with this email already exists.</string>
+    <string name="error_demasiados_intentos">Too many attempts. Wait a few minutes and try again.</string>
+    <string name="error_iniciar_sesion">Couldn\'t sign in</string>
+    <string name="error_perfil_permisos">Couldn\'t read your profile: insufficient Firestore permissions (rules not published).</string>
+    <string name="error_permisos">You don\'t have permission for this action. Check your role and that the Firestore rules are published.</string>
+    <string name="error_red">Network error. Check your internet connection.</string>
+    <string name="error_sin_conexion">No connection. Check your internet and try again.</string>
+    <string name="error_sin_cuenta">No account found with this email. Want to sign up?</string>
+    <string name="error_sin_servidor">Can\'t reach the server. Check your internet and try again.</string>
+
+    <!-- Cuenta (Firebase Auth) -->
+    <string name="auth_codigo_asociado">Student ID %1$s is already linked to another verified account (or the Firestore rules aren\'t published). Visit Student Welfare.</string>
+    <string name="auth_codigo_registrado">Student ID %1$s is already registered to another account. If it\'s yours, visit Student Welfare.</string>
+    <string name="auth_contrasena_debil">Firebase considers the new password weak. Choose another one.</string>
+    <string name="auth_contrasena_incorrecta">The current password is incorrect.</string>
+    <string name="auth_correo_no_verificado">Your email %1$s isn\'t verified yet. Open the link we sent you and try again.</string>
+    <string name="auth_error_crear_usuario">Couldn\'t create the user</string>
+    <string name="auth_error_usuario">Couldn\'t get the user</string>
+    <string name="auth_perfil_error">Couldn\'t create your profile. Check your connection and try again.</string>
+    <string name="auth_perfil_reglas">Couldn\'t create your profile: the database isn\'t accepting sign-ups (Firestore rules not published).</string>
+    <string name="auth_sesion_expiro">Your session expired. Sign in again.</string>
+    <string name="auth_sin_correo">Your account has no email address.</string>
+    <string name="auth_ya_verificado">Your email is already verified. Sign in as usual.</string>
+
+    <!-- Mensajes del inventario -->
+    <string name="repo_inv_actualizado">Item %1$s updated</string>
+    <string name="repo_inv_baja_prestado">Can\'t retire %1$s while it\'s on loan.</string>
+    <string name="repo_inv_cantidad_menor">The total can\'t be less than %1$d (pieces currently on loan, damaged or lost).</string>
+    <string name="repo_inv_codigo_duplicado">An item with code %1$s already exists. Use another code.</string>
+    <string name="repo_inv_codigo_vacio">The item code can\'t be empty</string>
+    <string name="repo_inv_dado_de_baja">Item %1$s retired</string>
+    <plurals name="repo_inv_descontadas">
+        <item quantity="one">%1$d lost piece of %2$s written off</item>
+        <item quantity="other">%1$d lost pieces of %2$s written off</item>
+    </plurals>
+    <string name="repo_inv_disponible">Item %1$s is available again</string>
+    <string name="repo_inv_ejemplo_cargado">%1$s sample items loaded</string>
+    <string name="repo_inv_error_actualizar">Couldn\'t update the item</string>
+    <string name="repo_inv_error_baja">Couldn\'t retire the item</string>
+    <string name="repo_inv_error_descontar">Couldn\'t write off the pieces</string>
+    <string name="repo_inv_error_ejemplo">Couldn\'t load the sample inventory</string>
+    <string name="repo_inv_error_registrar">Couldn\'t add the item</string>
+    <string name="repo_inv_estado_prestado">The ON LOAN status is only set when recording a loan.</string>
+    <string name="repo_inv_incompleto_cantidad">\"Incomplete\" doesn\'t apply to quantity-tracked items: use damaged or lost.</string>
+    <string name="repo_inv_marcado">Item %1$s marked as %2$s</string>
+    <string name="repo_inv_registrado">Item %1$s added</string>
+    <string name="repo_inv_registrados">%1$s items added (%2$s to %3$s)</string>
+    <string name="repo_inv_sin_articulos">No items to add</string>
+    <string name="repo_inv_sin_extraviadas">No lost pieces to write off.</string>
+    <plurals name="repo_inv_solo_hay_danadas">
+        <item quantity="one">Only %1$d damaged piece is logged.</item>
+        <item quantity="other">Only %1$d damaged pieces are logged.</item>
+    </plurals>
+    <plurals name="repo_inv_solo_hay_disponibles">
+        <item quantity="one">Only %1$d piece is available to report an issue.</item>
+        <item quantity="other">Only %1$d pieces are available to report an issue.</item>
+    </plurals>
+    <plurals name="repo_inv_solo_hay_extraviadas">
+        <item quantity="one">Only %1$d lost piece is logged.</item>
+        <item quantity="other">Only %1$d lost pieces are logged.</item>
+    </plurals>
+    <string name="repo_inv_tipo_invalido">Invalid issue type: %1$s</string>
+    <string name="repo_inv_una_pieza">Items in %1$s are single-piece: they can\'t be incomplete. Use damaged or lost.</string>
+    <string name="repo_inv_unidad_prestada">Unit %1$s is on loan.</string>
+    <string name="repo_inv_unidad_prestada_cambiar">Unit %1$s is on loan. Record the return to change its status.</string>
+    <string name="repo_inv_unidad_prestada_novedad">Unit %1$s is on loan: report the issue when you record the return.</string>
+    <string name="repo_inv_ya_tiene">The inventory already has items.</string>
+
+    <!-- Mensajes de préstamos y devoluciones -->
+    <string name="repo_pre_agrega_articulo">Add at least one item to the loan.</string>
+    <string name="repo_pre_articulo_baja">Item %1$s has been retired.</string>
+    <string name="repo_pre_configura_semestre">First set the end-of-semester date in \"Hours &amp; Semester\".</string>
+    <string name="repo_pre_devolucion_novedades">Return recorded with issues. The ID card stays held and the student is blocked.</string>
+    <string name="repo_pre_devolucion_ok">Return recorded. Hand the ID card back to the student.</string>
+    <string name="repo_pre_devolucion_propia">Another assistant must record the return or resolve issues on your own loans.</string>
+    <string name="repo_pre_error_devolucion">Couldn\'t record the return</string>
+    <string name="repo_pre_error_registrar">Couldn\'t record the loan</string>
+    <string name="repo_pre_error_resolver">Couldn\'t resolve the issue</string>
+    <string name="repo_pre_estudiante_bloqueado">Blocked: the student has a return with unresolved issues.</string>
+    <string name="repo_pre_estudiante_no_registrado">The student is no longer registered in the app.</string>
+    <string name="repo_pre_fecha_posterior">The due date must be after the loan time.</string>
+    <string name="repo_pre_fecha_supera">The due date can\'t be after the end of the semester (%1$s).</string>
+    <string name="repo_pre_no_encontrado">Loan not found.</string>
+    <string name="repo_pre_novedad_resuelta">Issue resolved. ID card released and student unblocked.</string>
+    <string name="repo_pre_prestamo_activo">The student has an unreturned loan and their ID card is held.</string>
+    <string name="repo_pre_prestamo_propio">You can\'t record a loan for yourself. Ask another assistant.</string>
+    <string name="repo_pre_registrado">Loan recorded. ID card held until %1$s.</string>
+    <string name="repo_pre_selecciona_estudiante">Select a registered student.</string>
+    <string name="repo_pre_sin_novedades">This loan has no pending issues.</string>
+    <string name="repo_pre_solo_quedan">Only %1$s of \"%2$s\" left (you asked for %3$s).</string>
+    <string name="repo_pre_unidad_no_disponible">Unit %1$s is no longer available (%2$s).</string>
+    <string name="repo_pre_ya_devuelto">This loan has already been returned.</string>
+
+    <!-- Mensajes del horario -->
+    <string name="repo_hor_error_eliminar">Couldn\'t delete the time slot</string>
+    <string name="repo_hor_error_guardar">Couldn\'t save the hours</string>
+    <string name="repo_hor_error_semestre">Couldn\'t save the end-of-semester date</string>
+    <string name="repo_hor_franja_eliminada">Time slot deleted</string>
+    <string name="repo_hor_guardado">Hours saved</string>
+    <string name="repo_hor_semestre_guardado">End-of-semester date saved</string>
+
+    <!-- Perfil -->
+    <string name="perfil_reglas">Firestore rejected the change: the new firestore.rules version (with profile photos and phone) isn\'t published yet.</string>
+
+    <!-- Estados de artículos y préstamos -->
+    <string name="estado_agotado">Out of stock</string>
+    <string name="estado_buen_estado">Good condition</string>
+    <string name="estado_danado">Damaged</string>
+    <string name="estado_disponible">Available</string>
+    <string name="estado_en_reparacion">In repair</string>
+    <string name="estado_extraviado">Lost</string>
+    <string name="estado_incompleto">Incomplete</string>
+    <string name="estado_pendiente">Pending</string>
+    <string name="estado_prestado">On loan</string>
+
+    <!-- Categorías de base del inventario -->
+    <string name="categoria_ajedrez">Chess</string>
+    <string name="categoria_balones">Balls</string>
+    <string name="categoria_conos">Cones</string>
+    <string name="categoria_otros">Other</string>
+    <string name="categoria_petos">Bibs</string>
+    <string name="categoria_raquetas">Rackets</string>
+    <string name="categoria_todas">All</string>
+    <string name="categoria_todos">All</string>
+
+    <!-- Programas académicos -->
+    <string name="programa_administracion">Business Administration</string>
+    <string name="programa_arquitectura">Architecture</string>
+    <string name="programa_comercio">International Trade</string>
+    <string name="programa_mercadeo">Marketing</string>
+    <string name="programa_otro">Other program</string>
+    <string name="programa_sistemas">Systems Engineering</string>
+
+    <!-- Días de la semana -->
+    <string name="dia_domingo">Sunday</string>
+    <string name="dia_jueves">Thursday</string>
+    <string name="dia_lunes">Monday</string>
+    <string name="dia_martes">Tuesday</string>
+    <string name="dia_miercoles">Wednesday</string>
+    <string name="dia_numero">Day %1$d</string>
+    <string name="dia_sabado">Saturday</string>
+    <string name="dia_viernes">Friday</string>
+</resources>

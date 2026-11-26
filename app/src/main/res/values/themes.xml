@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.MyApplication" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <!--
+        Pantalla de carga del sistema al abrir la app (core-splashscreen, igual en Android 12 o
+        superior y en las anteriores). Android la dibuja antes de que la app sepa si hay sesión,
+        así que es solo el fondo negro: el logo lo muestra la app, y solo con sesión. Dura hasta el
+        primer cuadro de la app. Después la app usa Theme.MyApplication.
+    -->
+    <style name="Theme.MyApplication.Carga" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/fondo_logo</item>
+        <item name="windowSplashScreenAnimatedIcon">@android:color/transparent</item>
+        <item name="postSplashScreenTheme">@style/Theme.MyApplication</item>
+    </style>
+
+    <!--
+        Android 13 o superior, con sesión iniciada: el logo desde que se toca el ícono. MainActivity
+        la elige para la próxima apertura (setSplashScreenTheme) y vuelve a la de arriba al cerrar
+        sesión. El logo queda en el mismo tamaño y posición que el de la app.
+    -->
+    <style name="Theme.MyApplication.CargaConLogo" parent="Theme.MyApplication.Carga">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo_carga</item>
+    </style>
+</resources>
